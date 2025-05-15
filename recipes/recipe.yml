@@ -12,20 +12,17 @@ image-version: 42 # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
+
   - type: files
     files:
       - source: system
         destination: /
 
-  - type: rpm-ostree
-    repos:
-      - https://negativo17.org/repos/fedora-multimedia.repo
-
-  - type: akmods
-    base: bazzite
-    install:
-      - evdi
-
+  - type: script
+    snippets:
+      - "curl -o /tmp/DisplayLink.rpm https://github.com/displaylink-rpm/displaylink-rpm/releases/download/v6.1.1-1/fedora-42-displaylink-1.14.10-1.github_evdi.x86_64.rpm"
+      - "rpm-ostree install /tmp/DisplayLink.rpm"
+      
   - type: default-flatpaks
     notify: true 
     system:
