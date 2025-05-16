@@ -22,7 +22,7 @@ modules:
       - https://negativo17.org/repos/fedora-multimedia.repo
 
   - type: akmods
-    base: extra
+    base: bazzite
     install:
       - evdi
 
