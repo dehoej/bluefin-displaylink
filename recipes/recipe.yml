@@ -11,11 +11,7 @@ modules:
     files:
       - source: system
         destination: /
-
-  - type: rpm-ostree
-    repos:
-      - https://negativo17.org/repos/fedora-multimedia.repo
-
+        
   - type: akmods
     base: main
     install:
