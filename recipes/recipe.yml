@@ -17,7 +17,7 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/ublue-os/akmods/repo/fedora-41/ublue-os-akmods-fedora-41.repo
         
   - type: akmods
-    base: main
+    base: extra
     install:
       - evdi
 
