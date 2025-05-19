@@ -14,7 +14,7 @@ modules:
 
   - type: rpm-ostree
     repos:
-      - https://copr.fedorainfracloud.org/coprs/ublue-os/akmods/repo/fedora-41/ublue-os-akmods-fedora-41.repo
+      - https://negativo17.org/repos/fedora-multimedia.repo
         
   - type: akmods
     base: extra
