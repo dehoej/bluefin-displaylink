@@ -16,7 +16,6 @@ modules:
     repos:
       - https://negativo17.org/repos/fedora-multimedia.repo
     install:
-      - kmod-evdi
       - displaylink
       - libevdi
         
