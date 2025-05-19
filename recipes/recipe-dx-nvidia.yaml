@@ -1,0 +1,30 @@
+name: blue-build
+
+description: This is my personal OS image.
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/bluefin-dx-nvidia
+image-version: 41
+
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: /
+
+  - type: rpm-ostree
+    repos:
+      - https://negativo17.org/repos/fedora-multimedia.repo
+
+  - type: akmods
+    base: main
+    install:
+      - evdi
+
+  - type: default-flatpaks
+    notify: true 
+    system:
+      install:
+        - org.mozilla.firefox
+
+  - type: signing
