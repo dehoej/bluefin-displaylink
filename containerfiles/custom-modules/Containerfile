@@ -1,9 +1,5 @@
 RUN --mount=type=tmpfs,target=/var/lib/dkms \
     --mount=type=bind,source=./files/scripts/,target=/scripts/ \
-#    --mount=type=bind,source=./mok.key,target=/var/lib/dkms/mok.key \
-#    --mount=type=bind,source=./files/system/etc/mok.der,target=/var/lib/dkms/mok.der \
-#    --mount=type=bind,source=./mok.key,target=/etc/pki/akmods/private/private_key.priv \
-#    --mount=type=bind,source=./files/system/etc/mok.der,target=/etc/pki/akmods/certs/public_key.der \
     --mount=type=cache,dst=/var/cache/rpm-ostree,id=rpm-ostree-cache-myfw-latest,sharing=locked \
     --mount=type=cache,dst=/var/cache/libdnf5,id=dnf-cache-myfw-latest,sharing=locked \
     
