@@ -5,7 +5,7 @@ MOK_DER=${3:-/var/lib/dkms/mok.der }
 set -e
 
 echo "Installing kmod-evdi"
-dnf install -y kmod-evdi
+dnf install -y kmod-evdi displaylink
 
 echo "Building evdi kmod for $KERN"
 akmods --force --kernels $KERN --akmod evdi
