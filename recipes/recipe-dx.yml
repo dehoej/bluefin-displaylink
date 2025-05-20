@@ -11,6 +11,7 @@ image-version: stable # latest is also supported if you want new updates ASAP
 
 alt-tags:
   - stable
+  - latest
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
