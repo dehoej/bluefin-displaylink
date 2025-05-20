@@ -3,6 +3,9 @@
 This is a bluefin image with displaylink and evdi. It exists in a stable and a gts image-version. It is always based directly on https://github.com/ublue-os/bluefin.
 There is a bluefin-displaylink package and a bluefin-displaylink-dx package. This has mainly been created for me to be able to use a Lenovo Displaylink based dock with dual monitor in combination with my P14s gen 5 AMD Ryzen PRO.
 
+> [!NOTE]
+> In this repo stable and latest is the same
+
 ## Installation
 
 > [!WARNING]  
