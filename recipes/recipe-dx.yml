@@ -1,13 +1,16 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
-name: bluefin-dx-displaylink
+name: bluefin-displaylink
 # description will be included in the image's metadata
-description: This is my bluefin image with evdi + displaylink
+description: Bluefin DX image with displaylink and evdi
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/bluefin-dx
-image-version: latest # latest is also supported if you want new updates ASAP
+image-version: stable # latest is also supported if you want new updates ASAP
+
+alt-tags:
+  - stable
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
