@@ -1,9 +1,9 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
-name: myasus
+name: bluefin-dx-displaylink
 # description will be included in the image's metadata
-description: This is my image for Asus ImagineBook.
+description: This is my bluefin image with evdi + displaylink
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/bluefin-dx
@@ -16,8 +16,6 @@ modules:
     files:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
-      - source: asus
-        destination: /
 
   - type: rpm-ostree
     repos:
@@ -36,11 +34,6 @@ modules:
   - type: containerfile
     containerfiles:
       - custom-modules 
-
-  - type: fonts
-    fonts:
-      nerd-fonts:
-        - FiraCode
 
   # - type: default-flatpaks
   #   notify: true # Send notification after install/uninstall is finished (true/false)
