@@ -28,6 +28,9 @@ jobs:
         recipe:
           # !! Add your recipes here
           - recipe.yml
+          - recipe-gts.yml
+          - recipe-dx.yml
+          - recipe-dx-gts.yml
 
     steps:
       # the build is fully handled by the reusable github action
