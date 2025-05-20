@@ -1,8 +1,7 @@
-# bluefin-displaylink-amd &nbsp; [![bluebuild build badge](https://github.com/dehoej/bluefin-displaylink-amd/actions/workflows/build.yml/badge.svg)](https://github.com/dehoej/bluefin-displaylink-amd/actions/workflows/build.yml)
+# bluefin-displaylink &nbsp; [![bluebuild build badge](https://github.com/dehoej/bluefin-displaylink/actions/workflows/build.yml/badge.svg)](https://github.com/dehoej/bluefin-displaylink/actions/workflows/build.yml)
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
-
-After setup, it is recommended you update this README to describe your custom image.
+This is a bluefin image with displaylink and evdi. It exists in a stable and a gts image-version. It is always based directly on https://github.com/ublue-os/bluefin.
+There is a bluefin-displaylink package and a bluefin-displaylink-dx package. This has mainly been created for me to be able to use a Lenovo Displaylink based dock with dual monitor in combination with my P14s gen 5 AMD Ryzen PRO.
 
 ## Installation
 
@@ -13,7 +12,7 @@ To rebase an existing atomic Fedora installation to the latest build:
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/dehoej/bluefin-displaylink-amd:latest
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/dehoej/bluefin-displaylink:stable
   ```
 - Reboot to complete the rebase:
   ```
@@ -21,7 +20,7 @@ To rebase an existing atomic Fedora installation to the latest build:
   ```
 - Then rebase to the signed image, like so:
   ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/dehoej/bluefin-displaylink-amd:latest
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/dehoej/bluefin-displaylink:stable
   ```
 - Reboot again to complete the installation
   ```
