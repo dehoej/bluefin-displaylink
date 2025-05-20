@@ -1,7 +1,7 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
-name: bluefin-displaylink
+name: bluefin-displaylink-dx
 # description will be included in the image's metadata
 description: Bluefin DX image with displaylink and evdi
 
